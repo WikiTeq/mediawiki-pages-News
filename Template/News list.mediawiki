@@ -1,0 +1,9 @@
+<includeonly><div class="news-item feed-{{#replace:{{lc:{{{4|}}}}}| |-}}">
+<div class="news-item-header {{#replace:{{lc:{{{4|}}}}}| |-}} {{#ifeq:{{#show:{{{1|}}}|?Status}}|Active|is-active|}}">
+;<span class="start-display-date {{#ifeq:{{{5|}}}|true|glyphicon glyphicon-pushpin|}}">{{#ifeq:{{FULLPAGENAME}}|Project:All_news||{{#ifeq:{{{5|}}}|true|<span class="news-type">Sticky</span>}} {{#timel: M j|{{{3|}}}}}}}</span><span class="start-display-date {{#ifeq:{{{6|}}}|true|glyphicon glyphicon-time|}}">{{#ifeq:{{{6|}}}|true|<span class="news-type">Annual</span>}}</span> {{{2|}}} <span class="news-type">{{{4|}}}</span>
+</div>
+<div class="news-item-announce">
+<p>{{#show: {{{1|}}}|?News announce }}...</p>
+[[{{{1|}}}|Read more ...]]
+</div>
+</div></includeonly><noinclude>[[Category:News feed]]</noinclude>

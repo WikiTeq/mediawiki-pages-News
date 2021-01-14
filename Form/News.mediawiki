@@ -1,0 +1,64 @@
+<includeonly>
+{{{info|page name=News_{{#timel: YmdHis}} }}}
+{{{for template|News}}}
+<div class="formtable">
+<p>'''Title''' {{#info: Mandatory field |icon=warning}}</p>
+<p>{{{field|Title|input type=text with autocomplete|values from property=News title|remote autocompletion|class=form-control|mandatory}}}</p>
+
+<p>'''News feed''' {{#info: Mandatory field |icon=warning}}</p>
+<p>{{{field|News type|input type=dropdown|property=News type|class=form-control|mandatory}}}</p>
+
+<p>'''Tags'''</p>
+<p>{{{field|Tags|input type=tokens|values from property=Tag|list|delimiter=,}}}</p>
+
+<p>'''Display''' {{#info: Start display date is mandatory |icon=warning}}</p>
+<p>from {{{field|Start display date|input type=datepicker|mandatory|default={{#timel:Y/m/d|now}} }}} to {{{field|End display date|input type=datepicker|default={{#timel:Y/m/d|now + 30 days}} }}}</p>
+<p>{{{field|Is annual|input type=checkbox|default=No}}} Repeat every year</p>
+<p>{{{field|Is sticky|input type=checkbox|default=No}}} Is sticky</p>
+<p>{{{field|Is hidden|input type=checkbox|default=Yes}}} Not ready for publication yet</p>
+
+<p>'''News text'''<p>
+<p>{{{field|News text|input type=textarea|rows=10|class=form-control|editor=visualeditor}}}
+
+<p>'''Attachments'''</p>
+<p>{{{field|Attachments|holds template}}}
+</div>
+{{{end template}}}
+
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+
+{{{for template|Attachments|multiple|add button text=Add attachment|embed in field=News[Attachments]}}}
+<p>{{{field|Media type|input type=radiobutton|values=Image,File,URL,Wiki page|default=Image|mandatory|show on select=Image=>media-type-image;File=>media-type-image;URL=>media-type-url;Wiki page=>media-type-wiki}}}</p>
+<div id="media-type-image">
+<p>Media</p>
+<p>{{{field|Media|uploadable|class=form-control}}}</p>
+
+<p>Caption</p>
+<p>{{{field|Caption|input type=text|class=form-control}}}</p>
+</div>
+<div id="media-type-url">
+<p>Link URL</p>
+<p>{{{field|Link URL|input type=text|class=form-control}}}</p>
+
+<p>Link text</p>
+<p>{{{field|Link text|input type=text|class=form-control}}}</p>
+</div>
+<div id="media-type-wiki">
+<p>Page name</p>
+<p>{{{field|Wiki page|input type=text|class=form-control}}}</p>
+
+<p>Inclusion</p>
+<p>{{{field|Inclusion|input type=radiobutton|values=Link,Embed|default=Link|mandatory}}}</p>
+</div>
+
+{{{end template}}}
+</includeonly><noinclude>
+{{#formlink: form=News
+  |link text=<span class="btn btn-primary">Create News</span>
+}}  
+[[Category:News feed]]
+</noinclude>

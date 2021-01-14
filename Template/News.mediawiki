@@ -1,0 +1,104 @@
+<includeonly><div class="hide">
+__NOCACHE__
+{{DISPLAYTITLE: {{{Title|}}} }}
+[[Category:News]]
+[[News type::{{{News type|}}}]]
+[[Category:{{{News type|}}}]]
+{{#switch: {{{Is annual|}}}
+  |true
+  |Yes     =   
+[[Is annual::true]]
+[[Category:Annual events]]
+{{#ifexpr: {{#timel: Ymd}} >= {{#timel: Ymd|{{{Start display date|}}}}} and {{#timel: Ymd}} < {{#timel: Ymd|{{{End display date|}}}}}
+  |
+[[Date start::{{{Start display date|}}}]]
+[[Date end::{{{End display date|}}}]] 
+  |
+[[Date start::{{CURRENTYEAR}}/{{#timel: m/d|{{{Start display date|}}}}}]]
+[[Date end::{{#expr: {{CURRENTYEAR}} + ({{#timel: Y|{{{End display date|}}}}} - {{#timel: Y|{{{Start display date|}}}}})}}/{{#timel: m/d|{{{End display date|}}}}}]]
+}}
+  |#default         = 
+[[Date start::{{{Start display date|}}}]]
+[[Date end::{{{End display date|}}}]] 
+}}
+</div>
+<p>'''News feed:''' {{#queryformlink: form=News by tag|link text={{{News type|}}}|All news[News type]={{{News type|}}}|_run=1}} &middot; {{#timel: F j, Y|{{#switch: {{{Is annual|}}}
+  |true
+  |Yes  = {{#ifexpr: {{#timel: Ymd}} >= {{#timel: Ymd|{{{Start display date|}}}}} and {{#timel: Ymd}} < {{#timel: Ymd|{{{End display date|}}}}}|{{{Start display date|}}}|{{CURRENTYEAR}}/{{#timel: m/d|{{{Start display date|}}}}}}}
+  |#default       = {{{Start display date|}}}
+}}}}</p>
+{{#if: {{{Tags|}}}|
+<div class="news-tags">
+<p>'''Tags:''' {{#arraymap:{{{Tags|}}}|,|@|<span class="tag-label">{{#queryformlink: form=News by tag|link text=@|All news[Tag]=@|_run=1}}{{#set: Tag=@}}</span>|}}</p>
+</div>
+}}
+<div class="news-status">
+<p>'''Status:''' 
+<span class="tag-label">{{#switch:{{{Is hidden|}}}
+  |No      = {{#switch: {{{Is annual|}}}
+    |true
+    |Yes   = 
+{{#ifexpr: {{#timel: Ymd}} >= {{#timel: Ymd|{{{Start display date|}}}}} and {{#timel: Ymd}} < {{#timel: Ymd|{{{End display date|}}}}}
+  |{{#ifexpr: {{#timel:U}} > {{#timel:U|{{{Start display date|}}} }} and {{#timel:U}} < {{#timel:U|{{{End display date|}}} }}
+     |[[Status::Active]]
+     |[[Status::Inactive]]
+   }}
+  |{{#ifexpr: {{#timel:Ymd}} >= {{CURRENTYEAR}}{{#timel:md|{{{Start display date|}}}}} and {{#timel:Ymd}} < {{CURRENTYEAR}}{{#timel:md|{{{End display date|}}}}}
+     |[[Status::Active]]
+     |[[Status::Inactive]]
+   }}
+}}
+    |#default = 
+{{#ifexpr: {{#timel:U}} > {{#timel:U|{{{Start display date|}}} }} and {{#timel:U}} < {{#timel:U|{{{End display date|}}} }}
+  |[[Status::Active]]
+  |[[Status::Inactive]]
+}}
+}}
+  |#default=[[Status::Inactive]]
+}}</span>
+<span class="tag-label">{{#switch:{{{Is sticky|}}}
+        |true
+        |Yes      = [[Is sticky::true|Sticky]]
+        |#default = {{#set: Is sticky=false}}
+      }}</span>
+</p>
+</div>
+
+{{{News text|}}}{{#set: News announce={{#sub: {{{News text|}}}|0|200}} }}
+
+<div class="news-metadata" style="display:none">{{{Attachments|}}}
+{{#if: {{#ask: [[-Has subobject::{{FULLPAGENAME}}]] }}|
+<p>'''Attachments:'''</p>}}
+{{#tag: gallery
+  |{{#arraymap: {{#ask: [[-Has subobject::{{FULLPAGENAME}}]] [[Has image::+]] |mainlabel=- |headers=hide |?Has image |link=none }}
+     |,
+     |@
+     |@
+     |\n
+   }}
+}}<!--
+
+-->{{#arraymap: {{#ask: [[-Has subobject::{{FULLPAGENAME}}]] [[Has wiki link::+]] |mainlabel=- |headers=hide |?Inclusion |?Has wiki link |?Has caption |link=none |format=array |sep=; |propsep=* }}
+     |;
+     |$$$
+     |
+{{#if:{{#explode:$$$|*|0}}|{{#switch:{{#explode:$$$|*|0}}
+        |Embed=
+<div>{{:{{#explode:$$$|*|1}}}}</div>
+        |#default=
+* [[{{#explode:$$$|*|1}}|{{#if:{{#explode:$$$|*|2}}|{{#explode:$$$|*|2}}|{{#explode:$$$|*|1}}}}]]
+      }}
+      |
+* [[{{#explode:$$$|*|1}}|{{#if:{{#explode:$$$|*|2}}|{{#explode:$$$|*|2}}|{{#explode:$$$|*|1}}}}]]
+}}
+     |\n
+}}<!--
+
+-->{{#arraymap: {{#ask: [[-Has subobject::{{FULLPAGENAME}}]] [[Has external link::+]] |mainlabel=- |headers=hide |?Has external link |?Has caption |link=none |format=array |sep=; |propsep=* }}
+     |;
+     |$$$
+     |
+* [{{#replace:{{#explode:$$$|*|0}}| |_}} {{#explode:$$$|*|1}}]
+     |\n
+}}
+</div></includeonly><noinclude>[[Category:News feed]]</noinclude>

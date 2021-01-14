@@ -1,2 +1,2 @@
-[[Has type::Date]]
+[[Has type::Text]]
 [[Category:News feed]]

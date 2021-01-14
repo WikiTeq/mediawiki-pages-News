@@ -1,2 +1,2 @@
-[[Has type::Date]]
+[[Has type::Page]]
 [[Category:News feed]]

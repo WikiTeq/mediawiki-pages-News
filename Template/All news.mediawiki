@@ -1,0 +1,167 @@
+<includeonly>{{#ifeq: {{{1|}}}|actual||{{#ask: 
+  [[Category:News]]
+  [[Date start::<{{#timel: Y/m/d}}]]
+  |?Tag
+  |format=tagcloud
+  |template=News tagcloud
+  |class=alert center-block text-center
+  |outro=<div class="news-filters">
+Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
+    |link text=<span title="All tags"> &times; {{{Tag|}}}</span>
+    |All news[Tag]={{{1|}}}
+    |_run=1
+ }}
+ |All
+}}''' &middot; Feeds: '''{{#if: {{{News type|}}}|{{#queryformlink: form=News by tag
+    |link text=<span title="All feeds"> &times; {{{News type|}}}</span>
+    |All news[News type]={{{1|}}}
+    |_run=1
+  }}
+  |All
+}}'''
+</div>
+}}
+{{Years range menu}}}}
+<div id="recent-content">
+<div class="news-feeds news-filter-buttons">
+{{#arraymap: {{#ask: [[Property:News type]] |?Allows value |mainlabel=- |headers=hide }} |,|@|{{#queryformlink: form=News by tag
+      |link text=<span class="label label-default {{#replace:{{lc:@}}| |-}}-trigger">@</span>
+      |All news[News type]=@
+      |_run=1
+    }}|}}
+<span class="news-action-buttons">
+{{#ifeq: {{NAMESPACENUMBER}}|-1||<span class="plainlinks">[{{fullurl:{{FULLPAGENAME}}|action=purge}} <span class="label label-primary refresh-news">Refresh</span>]</span>}}{{#formlink: form=News
+  |link text=<span class="label label-success add-news">Add news</span>
+}}
+</span>
+</div>
+{{#if: 
+{{#ask:
+  [[Category:News]]
+  {{#switch: {{{1|all}}}
+    |all      =
+    |actual   = [[Status::Active]]
+    |#default =
+       [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
+       [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]] 
+  }}
+    [[Date start::<{{#timel: Y/m/d}}]]
+    {{#if: {{{Tag|}}}
+      |[[Tag::{{{Tag|}}}]]
+    }}
+    |limit=1
+    |searchlabel=
+  }}
+  |
+{{#switch: {{{1|}}}
+  |actual    =
+{{#ask: 
+  [[Category:News]]
+  [[Status::Active]]
+  [[Is sticky::true]]
+  [[Date start::<{{#timel: Y/m/d}}]]
+  {{#if: {{{Tag|}}}
+    |[[Tag::{{{Tag|}}}]]
+  }}
+  {{#if: {{{News type|}}}
+    |[[News type::{{{News type|}}}]]
+  }}
+  |sort=Date start,Modification date 
+  |order=descending,descending 
+  |?Display title of 
+  |?Date start 
+  |?News type 
+  |?Is sticky
+  |?Is annual
+  |link=none 
+  |format=template 
+  |template=News list 
+}}
+  |#default  =
+}}
+{{#ask: 
+  [[Category:News]]
+  {{#switch: {{{1|all}}}
+    |all      =
+    |actual   = [[Status::Active]][[Is sticky::false]]
+    |#default =
+       [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
+       [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]] 
+  }}
+  [[Date start::<{{#timel: Y/m/d}}]]
+  {{#if: {{{Tag|}}}
+    |[[Tag::{{{Tag|}}}]]
+  }}
+  {{#if: {{{News type|}}}
+    |[[News type::{{{News type|}}}]]
+  }}
+  |sort=Date start,Modification date 
+  |order=descending,descending
+  |?Display title of 
+  |?Date start 
+  |?News type 
+  |?Is sticky
+  |?Is annual
+  |link=none 
+  |format=template 
+  |template=News list 
+  |limit={{#ifeq: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}
+           |{{CURRENTYEAR}}
+           |250
+           |50
+         }}
+  |searchlabel=older news...
+}}
+  |
+<div class="news-item">
+;No news in {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} ...
+</div>
+}}
+</table>
+</div>
+{{#switch: {{BASEPAGENAME}}
+  |All news =
+{{DISPLAYTITLE: {{#switch: {{{1|all}}}
+  |all      = Ever published news ({{#ask:
+      [[Category:News]] 
+      [[Date start::<{{#timel: Y/m/d}}]]  
+      {{#if: {{{Tag|}}}
+        |[[Tag::{{{Tag|}}}]]
+      }}
+      {{#if: {{{News type|}}}
+        |[[News type::{{{News type|}}}]]
+      }}
+      |format=count
+   }})
+  |actual   = Actual news ({{#ask:
+      [[Category:News]]
+      [[Status::Active]]
+      [[Date start::<{{#timel: Y/m/d}}]]
+      {{#if: {{{Tag|}}}
+        |[[Tag::{{{Tag|}}}]]
+      }}
+      {{#if: {{{News type|}}}
+        |[[News type::{{{News type|}}}]]
+      }}
+      |format=count
+   }})
+  |#default = Published in {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} 
+({{#ask:
+  [[Category:News]]
+  [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
+<!--  [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]] -->
+  [[Date start::<{{#timel: Y/m/d}}]]
+  {{#if: {{{Tag|}}}
+    |[[Tag::{{{Tag|}}}]]
+  }}
+  {{#if: {{{News type|}}}
+    |[[News type::{{{News type|}}}]]
+  }}
+  |format=count }})
+}}}}
+  |#default =
+}}
+__NOCACHE__
+[[Category:News feed]]
+{{#ifeq: {{BASEPAGENAME}}|All news||<span class="news-feeds">[[Project:All news|<span class="label label-success">See all news</span>]]</span>}}
+</includeonly><noinclude>[[Category:News feed]]</noinclude>
