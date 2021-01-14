@@ -1,0 +1,7 @@
+== Download ==
+* [[media:NewsFeed.Stuff.xml|NewsFeed.Stuff.xml]]
+* [[media:NewsFeed.Common.xml|NewsFeed.Common.xml]]
+* [[media:NewsFeed.SampleContent.xml|NewsFeed.SampleContent.xml]]
+
+{{All news|actual}}
+{{DISPLAYTITLE: Actual News}}

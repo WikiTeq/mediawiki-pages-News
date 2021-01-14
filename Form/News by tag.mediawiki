@@ -1,0 +1,7 @@
+<includeonly>
+{{{for template|All news}}}
+{{{field|Tag|hidden}}}
+{{{field|News type|hidden}}}
+{{{end template}}}
+{{{standard input|run query}}}
+</includeonly><noinclude>[[Category:News feed]]</noinclude>

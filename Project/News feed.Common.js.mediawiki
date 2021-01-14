@@ -1,0 +1,18 @@
+<pre>
+
+/* Copy this code to your Mediawiki:Common.js */
+
+$(document).ready(function() { 
+
+/* NEWS FEED */
+
+  if ($('#wikiPreview').length) {
+     $('.news-metadata').detach().insertAfter('#wikiPreview').fadeIn('slow');
+  } else {
+     $('.news-metadata').detach().insertAfter('#mw-content-text').fadeIn('slow');
+  }
+
+});
+
+</pre>
+[[Category:News feed]]

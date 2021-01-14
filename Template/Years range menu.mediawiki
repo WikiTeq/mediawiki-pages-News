@@ -1,0 +1,33 @@
+<includeonly>
+<ul class="years-range-menu alert alert-info">
+{{#arraymap: {{:Project:Years range}}
+  |,
+  |@
+  |{{#if: {{#ask:
+[[Category:News]]
+[[Date start::>@]]
+[[Date start::<{{#timel:Y/m/d}}]]
+[[Date end::<<{{#expr: @ + 1}}]]
+|limit=1
+|searchlabel=
+}}
+  |
+<li style="{{#ifeq: @ 
+      |{{#titleparts:{{FULLPAGENAME}}||-1}}
+      |background: #f0f0f0
+      |
+    }}">{{#ifeq: @ 
+      |{{#titleparts:{{FULLPAGENAME}}||-1}}
+      |@
+      |{{#if: {{#show: Project:All news/@ |?Modification date }}
+         |[[Project:All news/@|@]]
+         |[{{fullurl: Project:All news/@|action=edit&preload=Template:All_news/Preload&wpSave=true}} @]
+       }}
+     }}
+</li>
+  |
+}}
+  |\n
+}}
+</ul>
+</includeonly><noinclude>[[Category:News feed]]</noinclude>

@@ -1,0 +1,169 @@
+{
+    "publisher": "PagePort",
+    "author": "PagePort",
+    "language": "en",
+    "url": "https:\/\/github.com\/WikiWorks\/Page-Exchange-packages",
+    "packages": {
+        "1": {
+            "globalID": 1,
+            "description": null,
+            "version": "0.1",
+            "pages": [
+                {
+                    "name": "News sample image.jpg",
+                    "namespace": "NS_IMAGE",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/File\/News+sample+image.jpg.mediawiki"
+                },
+                {
+                    "name": "News",
+                    "namespace": "PF_NS_FORM",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Form\/News.mediawiki"
+                },
+                {
+                    "name": "News by tag",
+                    "namespace": "PF_NS_FORM",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Form\/News+by+tag.mediawiki"
+                },
+                {
+                    "name": "All news",
+                    "namespace": "NS_PROJECT",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project\/All+news.mediawiki"
+                },
+                {
+                    "name": "All news",
+                    "namespace": "NS_PROJECT",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project\/All+news.mediawiki"
+                },
+                {
+                    "name": "All news",
+                    "namespace": "NS_PROJECT",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project\/All+news.mediawiki"
+                },
+                {
+                    "name": "News feed",
+                    "namespace": "NS_PROJECT",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project\/News+feed.mediawiki"
+                },
+                {
+                    "name": "News feed.Common.css",
+                    "namespace": "NS_PROJECT",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project\/News+feed.Common.css.mediawiki"
+                },
+                {
+                    "name": "News feed.Common.js",
+                    "namespace": "NS_PROJECT",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project\/News+feed.Common.js.mediawiki"
+                },
+                {
+                    "name": "Years range",
+                    "namespace": "NS_PROJECT",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project\/Years+range.mediawiki"
+                },
+                {
+                    "name": "Date end",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Date+end.mediawiki"
+                },
+                {
+                    "name": "Date start",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Date+start.mediawiki"
+                },
+                {
+                    "name": "Has caption",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Has+caption.mediawiki"
+                },
+                {
+                    "name": "Has external link",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Has+external+link.mediawiki"
+                },
+                {
+                    "name": "Has image",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Has+image.mediawiki"
+                },
+                {
+                    "name": "Has wiki link",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Has+wiki+link.mediawiki"
+                },
+                {
+                    "name": "Inclusion",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Inclusion.mediawiki"
+                },
+                {
+                    "name": "Is annual",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Is+annual.mediawiki"
+                },
+                {
+                    "name": "Is attachment",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Is+attachment.mediawiki"
+                },
+                {
+                    "name": "Is sticky",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Is+sticky.mediawiki"
+                },
+                {
+                    "name": "News announce",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/News+announce.mediawiki"
+                },
+                {
+                    "name": "Status",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Status.mediawiki"
+                },
+                {
+                    "name": "Tag",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property\/Tag.mediawiki"
+                },
+                {
+                    "name": "All news",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Template\/All+news.mediawiki"
+                },
+                {
+                    "name": "All news",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Template\/All+news.mediawiki"
+                },
+                {
+                    "name": "Attachments",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Template\/Attachments.mediawiki"
+                },
+                {
+                    "name": "News",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Template\/News.mediawiki"
+                },
+                {
+                    "name": "News list",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Template\/News+list.mediawiki"
+                },
+                {
+                    "name": "News tagcloud",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Template\/News+tagcloud.mediawiki"
+                },
+                {
+                    "name": "Years range menu",
+                    "namespace": "NS_TEMPLATE",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Template\/Years+range+menu.mediawiki"
+                }
+            ],
+            "requiredExtensions": [
+                "PageForms",
+                "SemanticMediaWiki"
+            ]
+        }
+    }
+}

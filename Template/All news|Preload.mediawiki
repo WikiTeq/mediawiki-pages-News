@@ -1,0 +1,1 @@
+<includeonly>{{All news}}</includeonly><noinclude>[[Category:News feed]]</noinclude>
