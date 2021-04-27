@@ -4,7 +4,7 @@
     "language": "en",
     "url": "https:\/\/github.com\/WikiTeq\/pages-News",
     "packages": {
-        "1": {
+        "pages-News": {
             "globalID": "pages-News",
             "description": null,
             "version": "0.1",
