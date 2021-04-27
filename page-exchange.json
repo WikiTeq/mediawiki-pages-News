@@ -1,11 +1,11 @@
 {
-    "publisher": "PagePort",
-    "author": "PagePort",
+    "publisher": "WikiTeq",
+    "author": "WikiTeq",
     "language": "en",
-    "url": "https:\/\/github.com\/WikiWorks\/Page-Exchange-packages",
+    "url": "https:\/\/github.com\/WikiTeq\/pages-News",
     "packages": {
         "1": {
-            "globalID": "1",
+            "globalID": "pages-News",
             "description": null,
             "version": "0.1",
             "pages": [
