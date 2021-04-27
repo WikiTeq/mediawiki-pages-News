@@ -1,0 +1,5 @@
+[[Has type::Text]]
+
+* [[Allows value::General]]
+* [[Allows value::Mediawiki]]
+

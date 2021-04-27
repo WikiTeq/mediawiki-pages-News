@@ -130,6 +130,11 @@
                     "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property%2FStatus.mediawiki"
                 },
                 {
+                    "name": "News type",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property%2FNews%20type.mediawiki"
+                },
+                {
                     "name": "Tag",
                     "namespace": "SMW_NS_PROPERTY",
                     "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Property%2FTag.mediawiki"
@@ -172,7 +177,8 @@
             ],
             "requiredExtensions": [
                 "PageForms",
-                "SemanticMediaWiki"
+                "SemanticMediaWiki",
+                "MagicNoCache"
             ]
         }
     }
