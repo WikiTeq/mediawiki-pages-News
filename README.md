@@ -1,5 +1,7 @@
 # News package
 
+Content author is @wikivisor
+
 # Requirements
 
 * SemanticMediaWiki
