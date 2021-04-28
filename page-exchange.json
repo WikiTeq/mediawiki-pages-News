@@ -10,11 +10,6 @@
             "version": "0.1",
             "pages": [
                 {
-                    "name": "News sample image.jpg",
-                    "namespace": "NS_FILE",
-                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/File%2FNews%20sample%20image.jpg.mediawiki"
-                },
-                {
                     "name": "News",
                     "namespace": "PF_NS_FORM",
                     "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Form%2FNews.mediawiki"
@@ -40,29 +35,9 @@
                     "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project%2FAll%20news.mediawiki"
                 },
                 {
-                    "name": "All news\/2019",
-                    "namespace": "NS_PROJECT",
-                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project%2FAll%20news%7C2019.mediawiki"
-                },
-                {
-                    "name": "All news\/2020",
-                    "namespace": "NS_PROJECT",
-                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project%2FAll%20news%7C2020.mediawiki"
-                },
-                {
                     "name": "News feed",
                     "namespace": "NS_PROJECT",
                     "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project%2FNews%20feed.mediawiki"
-                },
-                {
-                    "name": "News feed.Common.css",
-                    "namespace": "NS_PROJECT",
-                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project%2FNews%20feed.Common.css.mediawiki"
-                },
-                {
-                    "name": "News feed.Common.js",
-                    "namespace": "NS_PROJECT",
-                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/pages-News\/master\/Project%2FNews%20feed.Common.js.mediawiki"
                 },
                 {
                     "name": "Years range",
