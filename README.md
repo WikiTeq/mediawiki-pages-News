@@ -19,7 +19,7 @@ Content author is @wikivisor
 
 ## via PageExchange
 
-* add the following to the bottom of your `LocalSettings.php`: `#$wgPageExchangePackageFiles[] = 'https://raw.githubusercontent.com/WikiTeq/pages-News/master/page-exchange.json';`
+* add the following to the bottom of your `LocalSettings.php`: `#$wgPageExchangePackageFiles[] = 'https://raw.githubusercontent.com/WikiTeq/mediawiki-pages-News/master/page-exchange.json';`
 * navigate to `Special:Packages` and install the package
 * run `php maintenance/runJobs.php`
 
