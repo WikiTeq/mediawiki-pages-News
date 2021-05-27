@@ -20,6 +20,11 @@
                     "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/mediawiki-pages-News\/master\/Form%2FNews%20by%20tag.mediawiki"
                 },
                 {
+                    "name": "News",
+                    "namespace": "NS_CATEGORY",
+                    "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/mediawiki-pages-News\/master\/Category%2FNews.mediawiki"
+                },
+                {
                     "name": "News.css",
                     "namespace": "NS_MEDIAWIKI",
                     "url": "https:\/\/raw.githubusercontent.com\/WikiTeq\/mediawiki-pages-News\/master\/MediaWiki%2FNews.css.mediawiki"
