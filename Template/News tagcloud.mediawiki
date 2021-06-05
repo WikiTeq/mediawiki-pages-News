@@ -1,5 +1,5 @@
 <includeonly>{{#queryformlink: form=News by tag
-  |link text={{{1|}}}
-  |All news[Tag]={{{1|}}}
-  |_run=1
+	|link text={{{1|}}}
+	|All news[Tag]={{{1|}}}
+	|_run=1
 }}</includeonly><noinclude>[[Category:News feed]]</noinclude>

@@ -1,10 +1,10 @@
 <includeonly>{{#if: {{{Media|}}}{{{Link URL|}}}{{{Wiki page|}}}
-|{{#subobject:
-   |Is attachment=true
-   |Has image={{#ifeq:{{{Media type|}}}|Image|File:{{{Media|}}}|}}
-   |Has external link={{#ifeq:{{{Media type|}}}|URL|{{{Link URL|}}}|}}
-   |Has wiki link={{#switch:{{{Media type|}}}|File=File:{{{Media|}}}|Wiki page={{{Wiki page|}}}|#default=}}
-   |Has caption={{{Caption|}}}{{{Link text|}}}
-   |Inclusion={{{Inclusion|}}}
-}}}}
+	|{{#subobject:
+		|Is attachment=true
+		|Has image={{#ifeq:{{{Media type|}}}|Image|File:{{{Media|}}}|}}
+		|Has external link={{#ifeq:{{{Media type|}}}|URL|{{{Link URL|}}}|}}
+		|Has wiki link={{#switch:{{{Media type|}}}|File=File:{{{Media|}}}|Wiki page={{{Wiki page|}}}|#default=}}
+		|Has caption={{{Caption|}}}{{{Link text|}}}
+		|Inclusion={{{Inclusion|}}}
+	}}}}
 </includeonly><noinclude>[[Category:News feed]]</noinclude>
