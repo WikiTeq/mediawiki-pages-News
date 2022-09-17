@@ -3,7 +3,7 @@
 {{{for template|News}}}
 <div class="formtable">
 <p>'''Title''' {{#info: Mandatory field |icon=warning}}</p>
-<p>{{{field|Title|input type=text with autocomplete|values from property=News title|remote autocompletion|class=form-control|mandatory}}}</p>
+<p>{{{field|Title|input type=text|class=form-control|mandatory}}}</p>
 
 <p>'''News feed''' {{#info: Mandatory field |icon=warning}}</p>
 <p>{{{field|News type|input type=dropdown|property=News type|class=form-control|mandatory}}}</p>
