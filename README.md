@@ -6,7 +6,7 @@ Content author is @wikivisor
 
 * SemanticMediaWiki
 * PageForms
-* ParserFunctions (with `$wgPFEnableStringFunctions = true;`)
+* ParserFunctions (with `$wgPFEnableStringFunctions = true;`, depending on news length you may want to bump the string length limit `$wgPFStringLengthLimit = 10000;`)
 * MagicNoCache
 * PageExchange or PagePort
 
@@ -25,4 +25,4 @@ Content author is @wikivisor
 
 # Usage
 
-Once imported, navigate to `Project:All_news`
+Once imported, navigate to `Project:All_news`.
