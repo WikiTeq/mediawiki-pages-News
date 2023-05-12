@@ -4,7 +4,7 @@
   |?Tag
   |format=tagcloud
   |template=News tagcloud
-  |class=alert center-block text-center
+  |class=card mb-3 border-0 center-block text-center
   |outro=<div class="news-filters">
 Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
     |link text=<span title="All tags"> &times; {{{Tag|}}}</span>
