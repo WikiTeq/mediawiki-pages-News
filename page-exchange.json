@@ -159,6 +159,7 @@
                 "PageForms",
                 "ParserFunctions",
                 "SemanticMediaWiki",
+                "SemanticResultFormats",
                 "MagicNoCache"
             ]
         }
