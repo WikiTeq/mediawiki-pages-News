@@ -24,6 +24,10 @@
    padding: 4px 24px 1px;
 }
 
+.news-filters p {
+   margin-bottom: 0;
+}
+
 .news-item-header.is-active {
    border-left: 6px solid #36c;
 }
