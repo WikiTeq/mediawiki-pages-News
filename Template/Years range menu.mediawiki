@@ -1,4 +1,4 @@
-<includeonly><ul class="years-range-menu alert alert-info">
+<includeonly><ul class="years-range-menu card mb-3 border-0 alert-info">
 		{{#arraymap: {{:Project:Years range}}
 		|,
 		|@
