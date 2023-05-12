@@ -7,6 +7,7 @@ Content author is @wikivisor
 * SemanticMediaWiki
 * PageForms
 * ParserFunctions (with `$wgPFEnableStringFunctions = true;`, depending on news length you may want to bump the string length limit `$wgPFStringLengthLimit = 10000;`)
+* SemanticResultFormats (for tagcloud)
 * MagicNoCache
 * PageExchange or PagePort
 
