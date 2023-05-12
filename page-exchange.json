@@ -157,6 +157,7 @@
             ],
             "requiredExtensions": [
                 "PageForms",
+                "ParserFunctions",
                 "SemanticMediaWiki",
                 "MagicNoCache"
             ]
