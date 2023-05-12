@@ -78,7 +78,7 @@
 }
 
 .news-feeds {
-    margin-bottom: 2em;
+    margin-bottom: 1rem;
 }
 
 .news-feeds a:hover {
