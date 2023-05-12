@@ -90,6 +90,7 @@
     margin: 0 !important;
     padding: 2px 2px 1px 2px !important;
     margin-bottom: 1em !important;
+    flex-direction: row;
 }
 
 .page-Special_RunQuery_News_by_tag .years-range-menu,
