@@ -4,8 +4,8 @@
     "language": "en",
     "url": "https:\/\/github.com\/WikiTeq\/mediawiki-pages-News",
     "packages": {
-        "pages-News": {
-            "globalID": "pages-News",
+        "News": {
+            "globalID": "com.wikiteq.News",
             "description": null,
             "version": "0.1",
             "pages": [
