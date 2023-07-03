@@ -25,7 +25,7 @@
 }
 
 .news-filters p {
-   margin-bottom: 0;
+	margin: .5rem 0 !important;
 }
 
 .news-item-header.is-active {
@@ -91,6 +91,7 @@
     padding: 2px 2px 1px 2px !important;
     margin-bottom: 1em !important;
     flex-direction: row;
+    border: 0;
 }
 
 .page-Special_RunQuery_News_by_tag .years-range-menu,
@@ -102,14 +103,16 @@
     display: inline-block;
     padding: 6px;
     font-size: larger;
+	 color: #000 !important;
+	 border-radius: 2px;
 }
 
 .years-range-menu li:hover {
     background: #f58026;
 }
 
-.years-range-menu li a {
-    color: #fff;
+.years-range-menu a {
+    color: #fff important;
 }
 
 .years-range-menu li a:hover {
