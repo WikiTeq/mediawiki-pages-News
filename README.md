@@ -50,7 +50,7 @@ The most common use case is to deliver the "actual" news rather than the full hi
 
 ![Screenshot from 2023-07-02 14-05-19](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/26e57994-5746-4cf6-b79a-5a4dd5b550ae)
 
-News can be created with the form:
+News can be created by clicking the `Add news` button. A form with necessary controls and inputs is provided:
 
 ![Screenshot from 2023-07-02 14-04-19](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/3a771c51-13fd-4466-a5f4-184dffcd3d2e)
 
