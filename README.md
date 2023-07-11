@@ -1,15 +1,25 @@
 # News package
 
+`Package` is the installable set of MediaWiki pages. The News package provides a set of input forms and templates that make it easy to add and manage `News` - wiki pages announcing current events.
+
 Content author is @wikivisor
 
 # Requirements
 
+## Extensions
+
 * SemanticMediaWiki
 * PageForms
-* ParserFunctions (with `$wgPFEnableStringFunctions = true;`, depending on news length you may want to bump the string length limit `$wgPFStringLengthLimit = 10000;`)
-* SemanticResultFormats (for tagcloud)
+* ParserFunctions
+* SemanticResultFormats (for `tagcloud` format )
 * MagicNoCache
 * PageExchange or PagePort
+
+## Configuration settings
+
+* `$wgRestrictDisplayTitle = false;`
+* `$wgPFEnableStringFunctions = true;`
+* depending on news length, you may want to bump the string length limit `$wgPFStringLengthLimit = 10000;`
 
 # Setup
 
@@ -36,7 +46,7 @@ Tags and feeds can further filter news:
 
 The size of the tag link font varies depending on the number of news using this tag. Feeds and tags are independent dimensions that can be used for news classification.
 
-The most common use case is to deliver the actual news rather than the full history of the news posts. The actual news can be delivered to any page using `{{All news|actual}}` template call and wrapped to comply with the wiki's overall styling: 
+The most common use case is to deliver the "actual" news rather than the full history of the news posts. By "actual", we mean news, the visibility period of which includes the current date. The actual news can be delivered to any page using `{{All news|actual}}` template call and wrapped to comply with the wiki's overall styling: 
 
 ![Screenshot from 2023-07-02 14-05-19](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/26e57994-5746-4cf6-b79a-5a4dd5b550ae)
 
