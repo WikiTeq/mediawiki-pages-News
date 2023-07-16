@@ -35,30 +35,17 @@ Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
 }}
 </span>
 </div>
-{{#if: 
-{{#ask:
+<!-- if exist at least one news -->{{#if: {{#ask:
   [[Category:News]]
-  {{#switch: {{{1|all}}}
+  [[Modification date::+]]
+  {{#switch: {{{1|}}}
     |all      =
     |actual   = [[Status::Active]]
-    |#default =
+    |#default = {{#iferror: {{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} }} ||
        [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
        [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]] 
+     }}
   }}
-    [[Date start::<{{#timel: Y/m/d}}]]
-    {{#if: {{{Tag|}}}
-      |[[Tag::{{{Tag|}}}]]
-    }}
-    |limit=1
-    |searchlabel=
-  }}
-  |
-{{#switch: {{{1|}}}
-  |actual    =
-{{#ask: 
-  [[Category:News]]
-  [[Status::Active]]
-  [[Is sticky::true]]
   [[Date start::<{{#timel: Y/m/d}}]]
   {{#if: {{{Tag|}}}
     |[[Tag::{{{Tag|}}}]]
@@ -66,27 +53,43 @@ Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
   {{#if: {{{News type|}}}
     |[[News type::{{{News type|}}}]]
   }}
-  |sort=Date start,Modification date 
-  |order=descending,descending 
-  |?Display title of 
-  |?Date start 
-  |?News type 
-  |?Is sticky
-  |?Is annual
-  |link=none 
-  |format=template 
-  |template=News list 
+  |limit=1
+  |searchlabel=
 }}
-  |#default  =
-}}
-{{#ask: 
+  |<!-- then print sticky news first -->{{#switch: {{{1|}}}
+     |actual = {{#ask: 
+       [[Category:News]]
+       [[Status::Active]]
+       [[Is sticky::true]]
+       [[Date start::<{{#timel: Y/m/d}}]]
+       {{#if: {{{Tag|}}}
+         |[[Tag::{{{Tag|}}}]]
+       }}
+       {{#if: {{{News type|}}}
+         |[[News type::{{{News type|}}}]]
+       }}
+       |sort=Date start,Modification date 
+       |order=descending,descending 
+       |?Display title of 
+       |?Date start 
+       |?News type 
+       |?Is sticky
+       |?Is annual
+       |link=none 
+       |format=template 
+       |template=News list 
+     }}
+    |#default  =
+  }}
+<!-- then print regular news -->{{#ask: 
   [[Category:News]]
-  {{#switch: {{{1|all}}}
+  {{#switch: {{{1|}}}
     |all      =
     |actual   = [[Status::Active]][[Is sticky::false]]
-    |#default =
+    |#default = {{#iferror: {{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} }} ||
        [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
        [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]] 
+     }}
   }}
   [[Date start::<{{#timel: Y/m/d}}]]
   {{#if: {{{Tag|}}}
@@ -110,18 +113,18 @@ Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
            |250
            |50
          }}
-  |searchlabel=older news...
+  |searchlabel=older news.
 }}
-  |
+  |<!-- if no news -->
 <div class="news-item">
-;No news in {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} ...
+;No news in {{{1|}}} ...
 </div>
 }}
 </table>
 </div>
 {{#switch: {{BASEPAGENAME}}
   |All news =
-{{DISPLAYTITLE: {{#switch: {{{1|all}}}
+{{DISPLAYTITLE: {{#switch: {{{1|}}}
   |all      = Ever published news ({{#ask:
       [[Category:News]] 
       [[Date start::<{{#timel: Y/m/d}}]]  
@@ -148,8 +151,10 @@ Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
   |#default = Published in {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} 
 ({{#ask:
   [[Category:News]]
-  [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
-<!--  [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]] -->
+  {{#iferror: {{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} }} ||
+     [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
+     [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]]
+  }}
   [[Date start::<{{#timel: Y/m/d}}]]
   {{#if: {{{Tag|}}}
     |[[Tag::{{{Tag|}}}]]
