@@ -112,7 +112,7 @@
 }
 
 .years-range-menu a {
-    color: #fff important;
+    color: #fff !important;
 }
 
 .years-range-menu li a:hover {
