@@ -25,7 +25,7 @@ Content author is @wikivisor
 
 ## via PagePort
 
-* download the repository
+* download the repository to `~/pages-News` 
 * run `php extensions/PagePort/maintenance/importPages.php --source ~/pages-News`
 
 ## via PageExchange
