@@ -167,6 +167,5 @@ Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
   |#default =
 }}
 __NOCACHE__
-[[Category:News feed]]
 {{#ifeq: {{BASEPAGENAME}}|All news||<span class="news-feeds">[[Project:All news|<span class="label label-success">See all news</span>]]</span>}}
 </includeonly><noinclude>[[Category:News feed]]</noinclude>
