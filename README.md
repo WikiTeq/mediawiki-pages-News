@@ -8,12 +8,12 @@ Content author is @wikivisor
 
 ## Extensions
 
-* SemanticMediaWiki
-* PageForms
-* ParserFunctions
-* SemanticResultFormats (for `tagcloud` format )
-* MagicNoCache
-* PageExchange or PagePort
+* [SemanticMediaWiki](https://www.semantic-mediawiki.org/wiki/Help:Installation/Quick_guide)
+* [PageForms](https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Page_Forms/Download_and_installation)
+* [ParserFunctions](https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ParserFunctions)
+* [SemanticResultFormats](https://www.semantic-mediawiki.org/wiki/Extension:Semantic_Result_Formats/Installation) (for `tagcloud` format )
+* [MagicNoCache](https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNoCache)
+* [PageExchange](https://www.mediawiki.org/wiki/Extension:Page_Exchange)
 
 ## Configuration settings
 
@@ -22,13 +22,6 @@ Content author is @wikivisor
 * depending on news length, you may want to bump the string length limit `$wgPFStringLengthLimit = 10000;`
 
 # Setup
-
-## via PagePort
-
-* download the repository to `~/pages-News` 
-* run `php extensions/PagePort/maintenance/importPages.php --source ~/pages-News`
-
-## via PageExchange
 
 * add the following to the bottom of your `LocalSettings.php`: `$wgPageExchangePackageFiles[] = 'https://raw.githubusercontent.com/WikiTeq/mediawiki-pages-News/master/page-exchange.json';`
 * navigate to `Special:Packages` and install the package
