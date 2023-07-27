@@ -2,7 +2,7 @@
 {{{info|page name=News_{{#timel: YmdHis}} }}}
 {{{for template|News}}}
 <div class="formtable">
-<p>'''Title''' {{#info: Mandatory field |icon=warning}}</p>
+<p>'''Title''' (mandatory)</p>
 <p>{{{field|Title|input type=text|class=form-control|mandatory}}}</p>
 
 <p>'''News feed''' (mandatory). Create your own set of news feed by editing sample allowed values or adding new ones in [[Property:News type]].</p>
