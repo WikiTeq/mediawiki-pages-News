@@ -1,0 +1,2 @@
+This category is used by the [News](https://github.com/WikiTeq/mediawiki-pages-News) package internally.
+__HIDDENCAT__
