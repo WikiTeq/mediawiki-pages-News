@@ -5,17 +5,18 @@
 <p>'''Title''' {{#info: Mandatory field |icon=warning}}</p>
 <p>{{{field|Title|input type=text|class=form-control|mandatory}}}</p>
 
-<p>'''News feed''' {{#info: Mandatory field |icon=warning}}</p>
+<p>'''News feed''' (mandatory). Create your own set of news feed by editing sample allowed values or adding new ones in [[Property:News type]].</p>
 <p>{{{field|News type|input type=dropdown|property=News type|class=form-control|mandatory}}}</p>
 
-<p>'''Tags'''</p>
+<p>'''Tags'''. You can input multiple values separated by comma. You have the option to use the suggested tags from the dropdown or add new ones directly in the field.</p>
 <p>{{{field|Tags|input type=tokens|values from property=Tag|list|delimiter=,}}}</p>
 
-<p>'''Display''' {{#info: Start display date is mandatory |icon=warning}}</p>
-<p>from {{{field|Start display date|input type=datepicker|mandatory|default={{#timel:Y/m/d|now}} }}} to {{{field|End display date|input type=datepicker|default={{#timel:Y/m/d|now + 30 days}} }}}</p>
-<p>{{{field|Is annual|input type=checkbox|default=No}}} Repeat every year</p>
-<p>{{{field|Is sticky|input type=checkbox|default=No}}} Is sticky</p>
-<p>{{{field|Is hidden|input type=checkbox|default=Yes}}} Not ready for publication yet</p>
+<p>'''Display''' </p>
+<p>'''Start date''' (mandatory):{{{field|Start display date|input type=datepicker|mandatory|default={{#timel:Y/m/d|now}} }}}</p>
+<p>'''End date'''. Leave the end date empty to allow the default length of the news actuality (30 days):{{{field|End display date|input type=datepicker|default={{#timel:Y/m/d|now + 30 days}} }}}</p>
+<p style="white-space:nowrap">{{{field|Is annual|input type=checkbox|default=No}}} Repeat every year</p>
+<p style="white-space:nowrap">{{{field|Is sticky|input type=checkbox|default=No}}} Is sticky</p>
+<p style="white-space:nowrap">{{{field|Is hidden|input type=checkbox|default=Yes}}} Not ready for publication yet</p>
 
 <p>'''News text'''<p>
 <p>{{{field|News text|input type=textarea|rows=10|class=form-control|editor=visualeditor}}}
