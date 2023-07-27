@@ -30,7 +30,7 @@ Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
       |_run=1
     }}|}}
 <span class="news-action-buttons">
-{{#ifeq: {{NAMESPACENUMBER}}|-1||<span class="plainlinks">[{{fullurl:{{FULLPAGENAME}}|action=purge}} <span class="label label-primary refresh-news">Refresh</span>]</span>}}{{#formlink: form=News
+{{#ifeq: {{NAMESPACENUMBER}}|-1||[[Special:Purge/{{FULLPAGENAMEE}}|<span class="label label-primary refresh-news">Refresh</span>]]}}{{#formlink: form=News
   |link text=<span class="label label-success add-news">Add news</span>
 }}
 </span>
