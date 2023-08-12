@@ -19,7 +19,10 @@ Content author is @wikivisor
 
 * `$wgRestrictDisplayTitle = false;`
 * `$wgPFEnableStringFunctions = true;`
-* depending on news length, you may want to bump the string length limit `$wgPFStringLengthLimit = 10000;`
+
+When news length exceeds the default number of characters (N = 1000), you'll get a warning saying, "_Error: String exceeds N character limit._" Then you might want to bump the string length limit:
+
+* `$wgPFStringLengthLimit = 10000;`
 
 # Setup
 
