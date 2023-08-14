@@ -34,11 +34,11 @@ When news length exceeds the default number of characters (N = 1000), you'll get
 
 Once imported, navigate to `Project:All_news`. This page is created using the `{{All news|all}}` template call and displays all ever-created news categorized by the year of publication. 
 
-![Screenshot from 2023-07-02 13-55-02](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/4bc7eafa-b2ef-419e-8cb8-1339ec1c6ae8)
+![Screenshot from 2023-08-14 13-29-30](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/63a9d155-43ef-4388-80bc-914e1f47d838)
 
 Tags and feeds can further filter news:
 
-![Screenshot from 2023-07-02 13-55-46](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/4d365fae-990c-4f87-9522-07b35e570d5e)
+![Screenshot from 2023-08-14 13-30-03](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/db6564b9-2c23-4f00-b297-eec7c8aba8cb)
 
 The size of the tag link font varies depending on the number of news using this tag. Feeds and tags are independent dimensions that can be used for news classification.
 
@@ -48,7 +48,7 @@ The most common use case is to deliver the "actual" news rather than the full hi
 
 News can be created by clicking the `Add news` button. A form with necessary controls and inputs is provided:
 
-![Screenshot from 2023-07-02 14-04-19](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/3a771c51-13fd-4466-a5f4-184dffcd3d2e)
+![Screenshot from 2023-08-14 13-45-43](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/08438298-0681-4223-862f-1e530f078ee6)
 
 The form is designed to help users to set:
 * News display title that will override the technical page name given to the news page (similar to `News_20230426090835`);
@@ -64,6 +64,3 @@ The form provides the textarea for the news text (supports VisualEditor if [Exte
 Once saved, the form will produce the news page:
 
 ![Screenshot from 2023-07-02 13-58-58](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/daa7207a-e2cb-4de0-a388-c45bff5f897c)
-
-
-
