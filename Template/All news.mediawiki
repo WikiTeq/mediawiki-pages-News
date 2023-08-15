@@ -6,19 +6,20 @@
   |template=News tagcloud
   |class=card mb-3 border-0 center-block text-center
   |outro=<div class="news-filters">
-Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
-    |link text=<span title="All tags"> &times; {{{Tag|}}}</span>
-    |All news[Tag]={{{1|}}}
-    |_run=1
- }}
- |All
-}}''' &middot; Feeds: '''{{#if: {{{News type|}}}|{{#queryformlink: form=News by tag
-    |link text=<span title="All feeds"> &times; {{{News type|}}}</span>
-    |All news[News type]={{{1|}}}
-    |_run=1
+Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
+  |{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
+      |link text=<span title="All tags"> &times; {{{Tag|}}}</span>
+      |All news[Tag]={{{1|}}}
+      |_run=1
+    }}
+  }}{{#if: {{{News type|}}}|'''{{#queryformlink: form=News by tag
+      |link text=<span title="All feeds"> &times; {{{News type|}}}</span>
+      |All news[News type]={{{1|}}}
+      |_run=1
+    }}
   }}
-  |All
-}}'''
+ |None
+}}</b>
 </div>
 }}
 {{Years range menu}}}}
@@ -169,3 +170,4 @@ Tags: '''{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
 __NOCACHE__
 {{#ifeq: {{BASEPAGENAME}}|All news||<span class="news-feeds">[[Project:All news|<span class="label label-success">See all news</span>]]</span>}}
 </includeonly><noinclude>[[Category:News feed]]</noinclude>
+

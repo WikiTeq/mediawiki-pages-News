@@ -64,7 +64,7 @@ __NOCACHE__
 </p>
 </div>
 
-{{{News text|}}}{{#set: News announce={{#sub: {{{News text|}}}|0|200}} }}
+{{{News text|}}}{{#set: News announce={{#sub: {{{News text|}}}|0|200}}{{#ifexpr: 0{{#len: {{{News text|}}}}} > 200| ...}}}}
 
 <div class="news-metadata" style="display:none">{{{Attachments|}}}
 {{#if: {{#ask: [[-Has subobject::{{FULLPAGENAME}}]] }}|
@@ -102,3 +102,4 @@ __NOCACHE__
      |\n
 }}
 </div></includeonly><noinclude>[[Category:News feed]]</noinclude>
+

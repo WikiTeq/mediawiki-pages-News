@@ -3,6 +3,7 @@
 ;<span class="start-display-date {{#ifeq:{{{5|}}}|true|glyphicon glyphicon-pushpin|}}">{{#ifeq:{{FULLPAGENAME}}|Project:All_news||{{#ifeq:{{{5|}}}|true|<span class="news-type">Sticky</span>}} {{#timel: M j{{#ifeq:{{#timel:Y|{{{3|}}}}}|{{CURRENTYEAR}}||, Y}}|{{{3|}}}}}}}</span><span class="start-display-date {{#ifeq:{{{6|}}}|true|glyphicon glyphicon-time|}}">{{#ifeq:{{{6|}}}|true|<span class="news-type">Annual</span>}}</span> {{{2|}}} <span class="news-type">{{{4|}}}</span>
 </div>
 <div class="news-item-announce">{{#if:{{#show: {{{1|}}}|?News announce}}
-  |<p>{{#show: {{{1|}}}|?News announce}}... </p>
+  |<p>{{#show: {{{1|}}}|?News announce}}</p>
 }}<p>[[{{{1|}}}|Read more ...]]</p></div>
 </div></includeonly><noinclude>[[Category:News feed]]</noinclude>
+
