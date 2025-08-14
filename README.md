@@ -61,6 +61,6 @@ The form is designed to help users to set:
 
 The form provides the textarea for the news text (supports VisualEditor if [Extension:VEForAll](https://www.mediawiki.org/wiki/Extension:VEForAll) is installed) and a subform for adding attachments.
 
-Once saved, the form will produce the news page:
+Once saved, the form will produce the news page in the main namespace with the technical name like `News_20230426090835` and the display title set to the value provided in the form. The news page will contain the news text, attachments, and a list of tags and feeds used for this news.:
 
 ![Screenshot from 2023-07-02 13-58-58](https://github.com/WikiTeq/mediawiki-pages-News/assets/62721134/daa7207a-e2cb-4de0-a388-c45bff5f897c)

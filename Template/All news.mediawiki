@@ -1,4 +1,5 @@
 <includeonly>{{#ifeq: {{{1|}}}|actual||{{#ask: 
+  [[:+]]
   [[Category:News]]
   [[Date start::<{{#timel: Y/m/d}}]]
   |?Tag
@@ -26,17 +27,18 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
 <div id="recent-content">
 <div class="news-feeds news-filter-buttons">
 {{#arraymap: {{#ask: [[Property:News type]] |?Allows value |mainlabel=- |headers=hide }} |,|@|{{#queryformlink: form=News by tag
-      |link text=<span class="label label-default {{#replace:{{lc:@}}| |-}}-trigger">@</span>
+      |link text=<span class="badge badge-default {{#replace:{{lc:@}}| |-}}-trigger">@</span>
       |All news[News type]=@
       |_run=1
     }}|}}
 <span class="news-action-buttons">
-{{#ifeq: {{NAMESPACENUMBER}}|-1||[[Special:Purge/{{FULLPAGENAMEE}}|<span class="label label-primary refresh-news">Refresh</span>]]}}{{#formlink: form=News
-  |link text=<span class="label label-success add-news">Add news</span>
+{{#ifeq: {{NAMESPACENUMBER}}|-1||[[Special:Purge/{{FULLPAGENAMEE}}|<span class="badge badge-primary refresh-news">Actualiser</span>]]}}{{#formlink: form=News
+  |link text=<span class="badge badge-success add-news">Ajouter une nouvelle</span>
 }}
 </span>
 </div>
 <!-- if exist at least one news -->{{#if: {{#ask:
+  [[:+]]
   [[Category:News]]
   [[Modification date::+]]
   {{#switch: {{{1|}}}
@@ -44,7 +46,7 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
     |actual   = [[Status::Active]]
     |#default = {{#iferror: {{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} }} ||
        [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
-       [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]] 
+       [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]]
      }}
   }}
   [[Date start::<{{#timel: Y/m/d}}]]
@@ -58,7 +60,8 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
   |searchlabel=
 }}
   |<!-- then print sticky news first -->{{#switch: {{{1|}}}
-     |actual = {{#ask: 
+     |actual = {{#ask:
+       [[:+]]
        [[Category:News]]
        [[Status::Active]]
        [[Is sticky::true]]
@@ -69,27 +72,28 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
        {{#if: {{{News type|}}}
          |[[News type::{{{News type|}}}]]
        }}
-       |sort=Date start,Modification date 
-       |order=descending,descending 
-       |?Display title of 
-       |?Date start 
-       |?News type 
+       |sort=Date start,Modification date
+       |order=descending,descending
+       |?Display title of
+       |?Date start
+       |?News type
        |?Is sticky
        |?Is annual
-       |link=none 
-       |format=template 
-       |template=News list 
+       |link=none
+       |format=template
+       |template=News list
      }}
     |#default  =
   }}
-<!-- then print regular news -->{{#ask: 
+<!-- then print regular news -->{{#ask:
+  [[:+]]
   [[Category:News]]
   {{#switch: {{{1|}}}
     |all      =
     |actual   = [[Status::Active]][[Is sticky::false]]
     |#default = {{#iferror: {{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} }} ||
        [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
-       [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]] 
+       [[Date start::<<{{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} + 1 }}]]
      }}
   }}
   [[Date start::<{{#timel: Y/m/d}}]]
@@ -99,16 +103,16 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
   {{#if: {{{News type|}}}
     |[[News type::{{{News type|}}}]]
   }}
-  |sort=Date start,Modification date 
+  |sort=Date start,Modification date
   |order=descending,descending
-  |?Display title of 
-  |?Date start 
-  |?News type 
+  |?Display title of
+  |?Date start
+  |?News type
   |?Is sticky
   |?Is annual
-  |link=none 
-  |format=template 
-  |template=News list 
+  |link=none
+  |format=template
+  |template=News list
   |limit={{#ifeq: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}
            |{{CURRENTYEAR}}
            |250
@@ -127,8 +131,9 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
   |All news =
 {{DISPLAYTITLE: {{#switch: {{{1|}}}
   |all      = Ever published news ({{#ask:
-      [[Category:News]] 
-      [[Date start::<{{#timel: Y/m/d}}]]  
+      [[:+]]
+      [[Category:News]]
+      [[Date start::<{{#timel: Y/m/d}}]]
       {{#if: {{{Tag|}}}
         |[[Tag::{{{Tag|}}}]]
       }}
@@ -138,6 +143,7 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
       |format=count
    }})
   |actual   = Actual news ({{#ask:
+      [[:+]]
       [[Category:News]]
       [[Status::Active]]
       [[Date start::<{{#timel: Y/m/d}}]]
@@ -149,8 +155,9 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
       }}
       |format=count
    }})
-  |#default = Published in {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} 
+  |#default = Published in {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}
 ({{#ask:
+  [[:+]]
   [[Category:News]]
   {{#iferror: {{#expr: {{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}} }} ||
      [[Date start::>{{{1|{{#titleparts:{{FULLPAGENAME}}||-1}}}}}]]
@@ -168,6 +175,5 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
   |#default =
 }}
 __NOCACHE__
-{{#ifeq: {{BASEPAGENAME}}|All news||<span class="news-feeds">[[Project:All news|<span class="label label-success">See all news</span>]]</span>}}
+{{#ifeq: {{BASEPAGENAME}}|All news||<span class="news-feeds">[[Project:All news|<span class="badge badge-success">See all news</span>]]</span>}}
 </includeonly><noinclude>[[Category:News feed]]</noinclude>
-
