@@ -1,5 +1,16 @@
 [[Has type::Text]]
 
+{{#if: {{#show: {{FULLPAGENAME}}/list |?Modification date}}
+  |
+Please set your custom news types [{{fullurl: Property:News type/list|action=edit}} here] (one per line).
+{{#arraymap: {{:Property:News type/list}}
+  |\n
+  |@@@
+  |
+* [[Allows value::@@@]]
+  |\n
+}}
+  |
 * [[Allows value::General]]
 * [[Allows value::Mediawiki]]
-
+}}

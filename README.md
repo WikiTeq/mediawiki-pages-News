@@ -29,6 +29,7 @@ When news length exceeds the default number of characters (N = 1000), you'll get
 * add the following to the bottom of your `LocalSettings.php`: `$wgPageExchangePackageFiles[] = 'https://raw.githubusercontent.com/WikiTeq/mediawiki-pages-News/master/page-exchange.json';`
 * navigate to `Special:Packages` and install the package
 * run `php maintenance/runJobs.php`
+* navigate to `Property:News type` and follow the on-page instructions to create your custom news types.
 
 # Usage
 
