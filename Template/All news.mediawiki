@@ -9,12 +9,12 @@
   |outro=<div class="news-filters">
 Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
   |{{#if: {{{Tag|}}}|{{#queryformlink: form=News by tag
-      |link text=<span title="All tags"> &times; {{{Tag|}}}</span>
+      |link text=<span title="All tags"> &times; {{#replace:{{#replace:{{{Tag|}}}|<|&lt;}}|>|&gt;}}</span>
       |All news[Tag]={{{1|}}}
       |_run=1
     }}
   }}{{#if: {{{News type|}}}|'''{{#queryformlink: form=News by tag
-      |link text=<span title="All feeds"> &times; {{{News type|}}}</span>
+      |link text=<span title="All feeds"> &times; {{#replace:{{#replace:{{{News type|}}}|<|&lt;}}|>|&gt;}}</span>
       |All news[News type]={{{1|}}}
       |_run=1
     }}
@@ -51,10 +51,10 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
   }}
   [[Date start::<{{#timel: Y/m/d}}]]
   {{#if: {{{Tag|}}}
-    |[[Tag::{{{Tag|}}}]]
+    |[[Tag::{{#replace:{{#replace:{{#replace:{{{Tag|}}}|]||}}|[||}}|{{!}}||}}]]
   }}
   {{#if: {{{News type|}}}
-    |[[News type::{{{News type|}}}]]
+    |[[News type::{{#replace:{{#replace:{{#replace:{{{News type|}}}|]||}}|[||}}|{{!}}||}}]]
   }}
   |limit=1
   |searchlabel=
@@ -67,10 +67,10 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
        [[Is sticky::true]]
        [[Date start::<{{#timel: Y/m/d}}]]
        {{#if: {{{Tag|}}}
-         |[[Tag::{{{Tag|}}}]]
+         |[[Tag::{{#replace:{{#replace:{{#replace:{{{Tag|}}}|]||}}|[||}}|{{!}}||}}]]
        }}
        {{#if: {{{News type|}}}
-         |[[News type::{{{News type|}}}]]
+         |[[News type::{{#replace:{{#replace:{{#replace:{{{News type|}}}|]||}}|[||}}|{{!}}||}}]]
        }}
        |sort=Date start,Modification date
        |order=descending,descending
@@ -98,10 +98,10 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
   }}
   [[Date start::<{{#timel: Y/m/d}}]]
   {{#if: {{{Tag|}}}
-    |[[Tag::{{{Tag|}}}]]
+    |[[Tag::{{#replace:{{#replace:{{#replace:{{{Tag|}}}|]||}}|[||}}|{{!}}||}}]]
   }}
   {{#if: {{{News type|}}}
-    |[[News type::{{{News type|}}}]]
+    |[[News type::{{#replace:{{#replace:{{#replace:{{{News type|}}}|]||}}|[||}}|{{!}}||}}]]
   }}
   |sort=Date start,Modification date
   |order=descending,descending
@@ -135,10 +135,10 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
       [[Category:News]]
       [[Date start::<{{#timel: Y/m/d}}]]
       {{#if: {{{Tag|}}}
-        |[[Tag::{{{Tag|}}}]]
+        |[[Tag::{{#replace:{{#replace:{{#replace:{{{Tag|}}}|]||}}|[||}}|{{!}}||}}]]
       }}
       {{#if: {{{News type|}}}
-        |[[News type::{{{News type|}}}]]
+        |[[News type::{{#replace:{{#replace:{{#replace:{{{News type|}}}|]||}}|[||}}|{{!}}||}}]]
       }}
       |format=count
    }})
@@ -148,10 +148,10 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
       [[Status::Active]]
       [[Date start::<{{#timel: Y/m/d}}]]
       {{#if: {{{Tag|}}}
-        |[[Tag::{{{Tag|}}}]]
+        |[[Tag::{{#replace:{{#replace:{{#replace:{{{Tag|}}}|]||}}|[||}}|{{!}}||}}]]
       }}
       {{#if: {{{News type|}}}
-        |[[News type::{{{News type|}}}]]
+        |[[News type::{{#replace:{{#replace:{{#replace:{{{News type|}}}|]||}}|[||}}|{{!}}||}}]]
       }}
       |format=count
    }})
@@ -165,10 +165,10 @@ Active filters: <b>{{#if: {{{Tag|}}}{{{News type|}}}
   }}
   [[Date start::<{{#timel: Y/m/d}}]]
   {{#if: {{{Tag|}}}
-    |[[Tag::{{{Tag|}}}]]
+    |[[Tag::{{#replace:{{#replace:{{#replace:{{{Tag|}}}|]||}}|[||}}|{{!}}||}}]]
   }}
   {{#if: {{{News type|}}}
-    |[[News type::{{{News type|}}}]]
+    |[[News type::{{#replace:{{#replace:{{#replace:{{{News type|}}}|]||}}|[||}}|{{!}}||}}]]
   }}
   |format=count }})
 }}}}
