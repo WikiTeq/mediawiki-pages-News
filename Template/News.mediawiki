@@ -22,14 +22,14 @@ __NOCACHE__
 [[Date end::{{{End display date|}}}]] 
 }}
 </div>
-<p>'''News feed:''' {{#queryformlink: form=News by tag|link text={{{News type|}}}|All news[News type]={{{News type|}}}|_run=1}} &middot; {{#timel: F j, Y|{{#switch: {{{Is annual|}}}
+<p>'''News feed:''' {{#queryformlink: form=News by tag|link text={{#replace:{{#replace:{{{News type|}}}|<|&lt;}}|>|&gt;}}|All news[News type]={{#replace:{{#replace:{{#replace:{{{News type|}}}|]|}}|[|}}|{{!}}||}}|_run=1}} &middot; {{#timel: F j, Y|{{#switch: {{{Is annual|}}}
   |true
   |Yes  = {{#ifexpr: {{#timel: Ymd}} >= {{#timel: Ymd|{{{Start display date|}}}}} and {{#timel: Ymd}} < {{#timel: Ymd|{{{End display date|}}}}}|{{{Start display date|}}}|{{CURRENTYEAR}}/{{#timel: m/d|{{{Start display date|}}}}}}}
   |#default       = {{{Start display date|}}}
 }}}}</p>
 {{#if: {{{Tags|}}}|
 <div class="news-tags">
-<p>'''Tags:''' {{#arraymap:{{{Tags|}}}|,|@|<span class="tag-label">{{#queryformlink: form=News by tag|link text=@|All news[Tag]=@|_run=1}}{{#set: Tag=@}}</span>|}}</p>
+<p>'''Tags:''' {{#arraymap:{{{Tags|}}}|,|@|<span class="tag-label">{{#queryformlink: form=News by tag|link text={{#replace:{{#replace:@|<|&lt;}}|>|&gt;}}|All news[Tag]={{#replace:{{#replace:{{#replace:@|]|}}|[|}}|{{!}}||}}|_run=1}}{{#set: Tag=@}}</span>|}}</p>
 </div>
 }}
 <div class="news-status">
